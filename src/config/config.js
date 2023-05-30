@@ -3,13 +3,12 @@ const path = require('path')
 module.exports = {
   port: process.env.PORT || 8081,
   db: {
-    database: process.env.DB_NAME || 'travelProject',
-    user: process.env.DB_USER || 'travelProject',
-    password: process.env.DB_PASS || 'travelProject',
+    database: process.env.DB_NAME || 'travelproject1',
+    user: process.env.DB_USER || 'travelproject1',
+    password: process.env.DB_PASS || 'travelproject1',
     options: {
-      dialect: process.env.DIALECT || 'sqlite',
-      host: process.env.HOST || 'localhost',
-      storage: path.resolve(__dirname, '../../travelProject.sqlite')
+      dialect: process.env.DIALECT || 'mysql',
+      host: process.env.HOST || 'db4free.net'
     }
   }
 }

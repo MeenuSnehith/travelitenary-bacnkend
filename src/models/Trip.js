@@ -8,4 +8,5 @@ module.exports = (sequelize, DataTypes) =>
         fromdate: DataTypes.DATEONLY,
         todate: DataTypes.DATEONLY,
         description: DataTypes.STRING,
+        thumbnailURL: DataTypes.STRING
     })
