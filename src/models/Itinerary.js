@@ -3,8 +3,6 @@ module.exports = (sequelize, DataTypes) =>
         tripID: DataTypes.STRING,
         day: DataTypes.INTEGER,
         activity: DataTypes.STRING,
-        location: DataTypes.STRING,
-        locationIMG: DataTypes.STRING,
-        hotelName: DataTypes.STRING,
-        hotelIMG: DataTypes.STRING
+        locationID: DataTypes.STRING,
+        hotelID: DataTypes.STRING
     })

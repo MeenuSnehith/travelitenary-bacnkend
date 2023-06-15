@@ -29,13 +29,31 @@ module.exports = {
   async deleteHotel (req, res) {
     try {
       const hotel = await Hotel.destroy({
-        where: { id: req.body.id}
+        where: { id: req.params.id}
       })
       console.log("Deleted hotel")
-      res.send({status: "Success"})
+      res.send({status: "Success", deletedHotels: hotel})
     } catch (err) {
       res.status(500).send({
-        error: 'An error has occured trying to get hotel'
+        error: 'An error has occured trying to get hotel: ' + err
+      })
+    }
+  },
+  async updateHotel (req, res) {
+    console.log(req.body)
+    console.log(req.params.id)
+    try {
+      const hotel = await Hotel.update({
+        HotelName: req.body.HotelName,
+        ImageURL: req.body.ImageURL
+      } ,{
+        where:{ id: req.params.id }
+      })
+      console.log("Updated Hotel: " + hotel)
+      res.send({status: "Success", updatedHotels : hotel})
+    } catch (err) {
+      res.status(500).send({
+        error: 'An error while trying to update Hotel: ' + err
       })
     }
   }

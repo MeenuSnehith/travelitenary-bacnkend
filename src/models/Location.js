@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) =>
     sequelize.define('Location', {
-        Address1: DataTypes.STRING,
-        Address2: DataTypes.STRING,
+        Address: DataTypes.STRING,
+        Description: DataTypes.STRING(5000),
         ImageURL: DataTypes.STRING
     })
