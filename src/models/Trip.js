@@ -9,3 +9,4 @@ module.exports = (sequelize, DataTypes) =>
         todate: DataTypes.DATEONLY,
         description: DataTypes.STRING,
     })
+    //vishals
