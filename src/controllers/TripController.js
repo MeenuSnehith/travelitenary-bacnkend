@@ -81,10 +81,10 @@ module.exports = {
   async deleteTrip (req, res) {
     try {
       const trip = await Trip.destroy({
-        where: { id: req.body.id}
+        where: { id: req.params.id}
       })
       console.log("Deleted Trip")
-      res.send({status: "Success"})
+      res.send({status: "Success", deletedRecords:trip})
     } catch (err) {
       res.status(500).send({
         error: 'An error has occured trying to delete Trip'

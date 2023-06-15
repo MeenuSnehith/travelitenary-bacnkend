@@ -7,6 +7,6 @@ module.exports = (sequelize, DataTypes) =>
         costperperson: DataTypes.INTEGER,
         fromdate: DataTypes.DATEONLY,
         todate: DataTypes.DATEONLY,
-        description: DataTypes.STRING,
+        description: DataTypes.STRING(5000),
         thumbnailURL: DataTypes.STRING
     })

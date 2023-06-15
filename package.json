@@ -18,8 +18,7 @@
     "morgan": "^1.10.0",
     "mysql2": "^3.3.2",
     "nodemon": "^2.0.22",
-    "sequelize": "^6.31.1",
-    "sqlite3": "^5.1.6"
+    "sequelize": "^6.31.1"
   },
   "devDependencies": {
     "-": "^0.0.1",
